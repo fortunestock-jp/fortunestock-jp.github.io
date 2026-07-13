@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>黑斑藥曲 — CLOHAN / ForTUNE STOCK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&family=BIZ+UDMincho:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#030302;--bg2:#080807;--bg3:#0e0e0c;
+--w0:#ece8da;--w1:#b8b4a4;--w2:#706c5c;--w3:#3a3830;--w4:#1e1c16;
+--bdr:#1a1816;--bdr2:#282420;--bdr3:#3a3630;
+--beni:#b8323c;--midori:#2e8f5e;
+--serif:"BIZ UDMincho","Noto Serif JP",serif;
+--mono:"Share Tech Mono",monospace;
+}
+html{background:var(--bg);color:var(--w0);font-family:var(--mono);min-height:100%;-webkit-font-smoothing:antialiased;}
+body{background:var(--bg);min-height:100vh;}
+#build{position:fixed;bottom:10px;left:14px;z-index:500;font-size:0.4rem;letter-spacing:0.1em;color:var(--w4);pointer-events:none;}
+.main{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.2rem;}
+/* forTUNE STOCK＝小さな商標表示（箱の裏のロゴ） */
+.tm{position:fixed;top:16px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:7px;opacity:0.5;}
+.tm-rings{display:inline-flex;}
+.tm-ring{width:11px;height:11px;border-radius:50%;border:1px solid;display:inline-block;}
+.tm-ring.w{border-color:rgba(236,232,218,0.6);margin-right:-4px;}
+.tm-ring.g{border-color:rgba(209,169,102,0.7);}
+.tm-name{font-family:var(--mono);font-size:0.42rem;letter-spacing:0.3em;color:var(--w2);}
+/* 黑斑藥曲＝このページの主役 */
+.brand{text-align:center;margin-bottom:2.4rem;}
+.brand-tag{font-family:var(--mono);font-size:0.44rem;letter-spacing:0.26em;color:var(--w3);margin-bottom:1rem;}
+.brand-title{font-family:var(--serif);font-weight:700;font-size:clamp(2.1rem,8vw,3rem);letter-spacing:0.28em;color:var(--w0);padding-left:0.28em;text-shadow:0 0 40px rgba(232,228,218,0.04);}
+.brand-rule{width:46px;height:1px;background:rgba(209,169,102,0.7);margin:1.2rem auto 1rem;}
+.brand-line{font-family:var(--serif);font-size:0.64rem;letter-spacing:0.1em;color:var(--w1);line-height:2.1;}
+.stores{width:100%;max-width:440px;}
+.store{display:block;border:1px solid var(--bdr3);background:var(--bg2);text-decoration:none;color:var(--w0);padding:1.2rem 1.3rem;text-align:center;transition:border-color 0.2s,background 0.2s;}
+.store:hover{border-color:var(--w2);background:var(--bg3);}
+.store-enter-main{font-family:var(--serif);font-size:0.85rem;letter-spacing:0.3em;color:var(--w0);}
+.store-enter-sub{font-family:var(--mono);font-size:0.4rem;letter-spacing:0.16em;color:var(--w3);margin-top:0.5rem;}
+/* 奥の間（別室の気配。店より一段引いた設え） */
+.annex{margin-top:2rem;border:1px solid var(--bdr);background:transparent;padding:1.1rem 1.2rem;opacity:0.85;}
+.annex-head{font-size:0.4rem;letter-spacing:0.26em;color:var(--w4);margin-bottom:0.6rem;text-align:center;}
+.annex-line{font-family:var(--serif);font-size:0.6rem;letter-spacing:0.1em;color:var(--w2);text-align:center;margin-bottom:0.9rem;line-height:1.9;}
+.plaque{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--bdr);background:var(--bg);padding:0.8rem 1rem;margin-bottom:8px;}
+.plaque-l{font-family:var(--serif);font-size:0.74rem;letter-spacing:0.16em;color:var(--w2);}
+.plaque-l small{display:block;font-family:var(--serif);font-size:0.52rem;letter-spacing:0.1em;color:var(--w3);margin-top:0.3rem;}
+.plaque-r{font-size:0.42rem;letter-spacing:0.18em;color:var(--w3);white-space:nowrap;display:flex;align-items:center;gap:8px;}
+/* 灯＝ファンマーク ●/■（紅の●と翠の■、どちらの部屋もふたりの灯） */
+.mark{display:inline-flex;align-items:center;gap:4px;}
+.mark .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--beni);animation:breathe 4s ease-in-out infinite;}
+.mark .sq{display:inline-block;width:5px;height:5px;background:var(--midori);animation:breathe 4s ease-in-out infinite;animation-delay:2s;}
+@keyframes breathe{0%,100%{opacity:0.25}50%{opacity:0.85}}
+.annex-foot{font-family:var(--serif);font-size:0.5rem;letter-spacing:0.12em;color:var(--w3);text-align:center;margin-top:0.6rem;}
+.foot{margin-top:2.6rem;text-align:center;}
+.foot-line{font-size:0.42rem;letter-spacing:0.18em;color:var(--w4);}
+</style>
+</head>
+<body>
+<div id="build">FORTUNE-STOCK 2026.07-f10</div>
+
+<div class="main">
+  <div class="tm">
+    <span class="tm-rings"><span class="tm-ring w"></span><span class="tm-ring g"></span></span>
+    <span class="tm-name">ForTUNE STOCK</span>
+  </div>
+
+  <div class="brand">
+    <div class="brand-tag">CLOHAN ●/■ CLOCK HANDS</div>
+    <div class="brand-title">黑斑藥曲</div>
+    <div class="brand-rule"></div>
+    <div class="brand-line">あなたの声を検査し、いまの体内時間に<br>適合する藥曲を処方します。</div>
+  </div>
+
+  <div class="stores">
+    <a class="store" href="./clohan/">
+      <div class="store-enter-main">状態確認をはじめる</div>
+      <div class="store-enter-sub">SOUND VECTOR DETECTION ●/■ YAKKYOKU DISPENSING</div>
+    </a>
+
+    <div class="annex">
+      <div class="annex-head">ANNEX ●/■ 奥の間</div>
+      <div class="annex-line">この藥曲の奥に、ふたつの部屋をしつらえています。</div>
+      <div class="plaque">
+        <div class="plaque-l">オコエカケ<small>声の手紙の部屋</small></div>
+        <div class="plaque-r"><span class="mark"><span class="dot"></span><span class="sq"></span></span>支度中</div>
+      </div>
+      <div class="plaque">
+        <div class="plaque-l">ハリアワセ<small>針を合わせる部屋</small></div>
+        <div class="plaque-r"><span class="mark"><span class="dot"></span><span class="sq"></span></span>支度中</div>
+      </div>
+      <div class="annex-foot">扉がひらく日は、灯りでお知らせします。</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="foot-line">Powered by ForTUNE STOCK</div>
+  </div>
+</div>
+</body>
+</html>
